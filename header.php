@@ -18,8 +18,23 @@
     </a>
 
     <nav class="mobile"></nav>
+
+    <ul class="general-nav">
+    <?php bornkickers_dropdown_menu( 'main-menu' ); ?>
+    </ul>
+
+    <?php wp_nav_menu( array(
+        'theme_location'    => 'top-menu',
+        'menu'              => 'top-menu',
+        'menu_class'        => 'top-nav',
+        'container'         => 'nav',
+        'fallback_cb'       => false
+    ) ); ?>
+
+
     <nav>
         <ul class="top-nav">
+        
             <li>
                 <a href="https://bornkickers.leagueapps.com/dashboard" target="_blank">My Account</a>
             </li>

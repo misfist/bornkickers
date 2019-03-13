@@ -47,7 +47,7 @@
         </p>
     </div>
 
-    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.js"></script>
+    <!-- <script src="https://unpkg.com/simplebar@latest/dist/simplebar.js"></script> -->
 
 <?php wp_footer(); ?>
 </footer>
