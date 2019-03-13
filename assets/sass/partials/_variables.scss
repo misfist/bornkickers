@@ -1,0 +1,33 @@
+//colors
+$white: #fff;
+$black: #000;
+
+$color-red: #f20c23;
+$yellow: #ff0;
+
+/* Graus */
+$silver: #c0c0c0;
+$color_pumice_approx: #c5c5c5;
+$boulder: #7a7a7a;
+$black_35: rgba(0,0,0,0.35);
+$black_50: rgba(0, 0, 0, 0.5);
+$color_alto_approx: #dadada;
+$color_amaranth_approx: #f32647;
+
+//fonts
+$font-open-sans: 'Open Sans', sans-serif;
+$font-open-sans-bold: Open Sans Bold;
+$font-open-sans-semi: Open Sans Semibold;
+$font-sans: sans-serif;
+$font-mono: monospace;
+
+$font-base: $font-open-sans;
+$font-header: $font-open-sans-bold;
+
+
+$breakpoints: (
+    "sm":       376px,
+    "md":       800px,
+    "lg":       1040px,
+    "xl":       1439px,
+);

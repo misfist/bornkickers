@@ -28,7 +28,7 @@ get_header();
         </div>
 
         <div class="content content_template_base2">
-			<div class="row">
+		<div class="row grid">
 			<?php
 			if ( have_posts() ):
 				while ( have_posts() ) :

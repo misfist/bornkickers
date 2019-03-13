@@ -23,7 +23,7 @@ if ( have_posts() ):
         <div class="content content_template_base2">
           <?php the_content(); ?>
 
-          <div class="csRow">
+          <div class="row grid">
 
             <?php
             /**
