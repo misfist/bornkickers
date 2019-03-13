@@ -11,7 +11,8 @@
 	function bk_styles_scripts() {
 		wp_enqueue_style( 'bornkickers', get_template_directory_uri(). '/assets/css/bornkickers.css' );
 		wp_enqueue_script( 'bornkickers', get_template_directory_uri() . '/assets/js/bornkickers.js', array( 'jquery' ), false, true );
-		wp_enqueue_script( 'simplebar', esc_url( 'https://unpkg.com/simplebar@latest/dist/simplebar.js' ), null, false, true );
+		wp_enqueue_style( 'simplebar-style', esc_url( 'https://unpkg.com/simplebar@latest/dist/simplebar.css' ) );
+		wp_enqueue_script( 'simplebar-script', esc_url( 'https://unpkg.com/simplebar@latest/dist/simplebar.js' ), null, false, true );
 	}
 
 	add_action( 'wp_enqueue_scripts', 'bk_styles_scripts' );

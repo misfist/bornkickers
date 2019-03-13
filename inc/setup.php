@@ -14,6 +14,7 @@
  define( "TEMPLATE_DIR", get_template_directory_uri() );
  
  add_image_size( 'trainer', 400, 400 );
+ add_image_size( 'top-image', 1440, 760, true );
 
  if ( ! function_exists( 'bornkickers_menus' ) ) {
 
@@ -32,10 +33,15 @@
 	}
 	add_action( 'init', 'bornkickers_menus' );
 	
-	}
+}
+
+function bornkickers_post_thumbnails() {
+    add_theme_support( 'post-thumbnails' );
+}
+add_action( 'after_setup_theme', 'bornkickers_post_thumbnails' );
  
  
- add_action( 'init', 'init_remove_support', 100 );
+//  add_action( 'init', 'init_remove_support', 100 );
  function init_remove_support() {
 	 $post_id   = isset( $_GET['post'] ) ? $_GET['post'] : null;
 	 if ($post_id && is_admin() && $post_id == get_option( 'page_on_front' )){

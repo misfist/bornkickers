@@ -10,28 +10,27 @@
  */
 
 get_header();
-
-if ( have_posts() ):
-    while ( have_posts() ):
-        the_post();
-
-        $top_image = carbon_get_the_post_meta( 'crb_basic_top_image' );
-
+		
+		if( function_exists( 'carbon_get_the_post_meta' ) ) {
+			$top_image = carbon_get_the_post_meta( 'crb_basic_top_image' );
+		}
         ?>
 
         <div class="content">
 
-            <div class="top-image" style="background-image: url(<?php echo $top_image ?>)">
-<!--                <div class="corners"></div>-->
-                <h1><?php the_title(); ?></h1>
+            <div class="top-image" style="background-image: url(<?php echo esc_url( $top_image ) ?>)">
+				<!--                <div class="corners"></div>-->
+				<?php
+					the_archive_title( '<h1 class="page-title">', '</h1>' );
+				?>
             </div>
 
         </div>
 
         <div class="content content_template_base2">
-			<div class="grid">
+			<div class="row">
 			<?php
-			if( have_posts()  ) :
+			if ( have_posts() ):
 				while ( have_posts() ) :
 					the_post();
 
@@ -43,17 +42,13 @@ if ( have_posts() ):
 					get_template_part( 'template-parts/content/content', get_post_type() );
 
 					// End the loop.
+
 				endwhile;
-
-				else :
-
-				endif;
-						
+			endif;
+					
 			?>
 		  <div>
         </div>
     <?php
-    endwhile;
-endif;
 
 get_footer();

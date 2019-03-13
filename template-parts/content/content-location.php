@@ -14,8 +14,38 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php
-		the_title( '<h1 class="entry-title">', '</h1>' );
+		the_title( '<h3 class="entry-title">', '</h3>' );
 		?>
+
+		<div class="entry-meta">
+		<?php 
+		$seasons = get_the_terms( $post->ID, 'season');
+		if( !empty( $seasons ) ) { ?>
+
+			<ul class="cat-seasons">
+			<?php
+
+			foreach( $seasons as $season ) {
+
+				$image_id = get_term_meta( $season->term_id, 'image', true );
+
+				if ( ! empty( $image_id ) ) { 
+				?>
+
+					<li><?php echo wp_get_attachment_image( $image_id, 'full', true, array( 'class' => 'season' ) ); ?></li>
+
+				<?php
+				}
+
+			}
+
+			?>
+			</ul>
+
+		<?php
+		}
+		?>
+		</div>
 	</header><!-- .entry-header -->
 
 	<?php the_post_thumbnail(); ?>
@@ -47,6 +77,5 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php twentynineteen_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-${ID} -->
