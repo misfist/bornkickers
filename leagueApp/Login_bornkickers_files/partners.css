@@ -1,0 +1,256 @@
+/*  ----- P A R T N E R   S T Y L E S ------ */
+/* == SERVE HEADER BANNER & MAIN FEATURE
+-------------------------------------------------------------------------------- */
+.serve-wrap {
+  width: 920px;
+  margin: 0 auto;
+  padding-bottom: 35px;
+}
+
+#serve-banner {
+  display: block;
+  position: relative;
+  top: 20px;
+  background: transparent url(/_i/_site2.0/partners/serve/header-banner.png) 0 0 no-repeat;
+  height: 60px;
+  z-index: 99;
+}
+
+#serve-banner a {
+  display: inline-block;
+  margin: 10px 0 0 15px;
+}
+
+#frame {
+  position: relative;
+  padding: 50px 35px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  background: #fff url(/_i/_site2.0/partners/serve/feature-bg.jpg) 0 0 repeat-x;
+}
+
+#frame h1 {
+  background: transparent url(/_i/_site2.0/partners/serve/feature-title.png) 0 0 no-repeat;
+  height: 88px;
+  text-indent: -9999px;
+  margin: 20px 0 32px 0;
+}
+
+#frame p {
+  font-size: 15px;
+  line-height: 28px;
+  font-weight: normal;
+  text-shadow: white 1px 1px 0;
+}
+
+#frame p.last {
+  padding-bottom: 20px;
+}
+
+#frame .phone {
+  float: right;
+  padding: 22px 30px 0 90px;
+}
+
+#frame a.btn {
+  position: relative;
+  padding: 10px 32px;
+  background: rgba(0, 0, 0, 0.21) url(/_i/_site2.0/partners/serve/new-nav-gloss.png) 0 center repeat-x;
+  border: 2px solid rgba(0, 0, 0, 0.21);
+  -webkit-border-radius: 28px;
+  -moz-border-radius: 28px;
+  color: #fff;
+  text-shadow: black -1px -1px 0;
+  text-decoration: none;
+  font: normal bold 20px/28px "Helvetica Neue",Helvetica,Arial,sans-serif;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.21);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.21);
+}
+
+#frame a.btn.orange {
+  background-color: #f8740a;
+  text-shadow: rgba(0, 0, 0, 0.3) -1px -1px 0;
+  border-color: #f9990c;
+}
+
+#frame a.btn.orange:hover {
+  background-color: #0f4dab;
+  border-color: #004ec6;
+}
+
+/* == SUB-FEATURE BANNER
+-------------------------------------------------------------------------------- */
+.sub-features {
+  height: 120px;
+  margin: 80px 0 80px 0;
+  width: 920px;
+  position: relative;
+  left: -36px;
+  clear: both;
+}
+
+.sub-features h3 {
+  font-size: 16px;
+  padding-bottom: 5px;
+  margin-bottom: 0;
+  color: #fff;
+  letter-spacing: 0;
+}
+
+.sub-features ul {
+  background: #2358ab;
+  display: inline-block;
+  border-top: #fff 1px solid;
+  border-bottom: #fff 1px solid;
+}
+
+.sub-features li {
+  background: #2358ab url(/_i/_site2.0/partners/serve/sub-features-bg.jpg) bottom left no-repeat;
+  display: inline-block;
+  float: left;
+  margin: 0;
+  padding: 18px;
+  height: 112px;
+  width: 270px;
+  font-size: 12px;
+  line-height: 20px;
+  color: #e5effe;
+  text-shadow: rgba(0, 0, 0, 0.3) 1px 1px 0;
+}
+
+.sub-features li.middle {
+  background-position: 0 -150px;
+  width: 271px;
+}
+
+.sub-features li.end {
+  background-position: 0 0;
+}
+
+/* == AMEX LOGO & TEXT
+-------------------------------------------------------------------------------- */
+.amex {
+  width: 125px;
+  position: relative;
+  left: 730px;
+}
+
+.amex p {
+  font-size: 12px !important;
+  line-height: 16px !important;
+  color: #9b9c9b;
+  text-align: left;
+  margin-left: 7px;
+  padding-bottom: 8px !important;
+}
+
+/* -------------------------------------------------------------------------------------------
+	REGISTRATION CONFIRMATION CALLOUT - Related JSP - amexserve-programregconf.jsp
+---------------------------------------------------------------------------------------------- */
+#signup-extras {
+  background: #fff;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+  border-left: 1px solid rgba(0, 0, 0, 0.12);
+  margin: 10px 0 6px 0;
+  padding: 5px 8px 2px 9px;
+  -wekbit-border-radius: 4px;
+  border-radius: 4px;
+}
+
+#signup-extras.serve {
+  padding: 10px 0 0 12px;
+  min-height: 150px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+#signup-extras.serve h3 {
+  color: #25599C;
+}
+
+#signup-extras.serve h4 {
+  font-size: 14px;
+  background: none;
+  margin: 0;
+  padding: 0;
+}
+
+#signup-extras.serve p {
+  margin: 0 0 8px 0;
+}
+
+#signup-extras.serve a.more {
+  font-size: 12px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 13px 0 0 20px;
+  color: #25599C !important;
+}
+
+#signup-extras.serve a.more:hover {
+  color: #2d72cb !important;
+}
+
+#signup-extras.serve img.phone {
+  float: right;
+  position: relative;
+  bottom: -3px;
+  right: 15px;
+  margin-left: 20px;
+}
+
+/* -------------------------------------------------------------------------------------------
+	INVOICE LISTING - Related JSP - amexserve-paymentbutton.jsp
+---------------------------------------------------------------------------------------------- */
+.invoice-serve-callout {
+  float: right;
+  margin: 0 30px 0 0;
+  padding: 0;
+  text-align: right;
+  width: 340px;
+}
+
+.invoice-serve-callout p {
+  font-size: 11px;
+  font-weight: normal !important;
+  letter-spacing: normal !important;
+  line-height: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Invoice Detail Page Styles */
+.sponsorship-wrap .invoice-serve-callout {
+  margin: 4px 5px 0 0;
+}
+
+/* -------------------------------------------------------------------------------------------
+	FOOTER AFFILIATION CALLOUT
+---------------------------------------------------------------------------------------------- */
+.affiliate-partner {
+  font-size: 12px;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.4);
+  width: 980px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.affiliate-wrap {
+  float: right;
+  padding-top: 20px;
+}
+
+.affiliate-wrap p {
+  float: right;
+  padding-top: 5px;
+}
+
+.affiliate-wrap img {
+  margin: -12px 0 0 10px;
+}
+
+/* Narrow Page Adjustment - Hide when on the Login screen */
+body.narrow .affiliate-partner {
+  display: none;
+}

@@ -1,0 +1,270 @@
+/* ----------------------------------------------
+			REGISTRATION FORM LAYOUT & FIELDS
+	-------------------------------------------------*/
+#regContainer .signup-form {
+  margin-left: 20px;
+  clear: left;
+}
+
+#regContainer .signup-form .form-wrapper {
+  border: 1px solid #D4D4D4;
+  border-radius: 3px;
+  padding: 20px;
+}
+
+#regContainer .signup-form #page-title {
+  border-bottom: none;
+  line-height: 1;
+  padding-bottom: 0;
+  margin: 0 30px 20px 0;
+  font-size: 26px;
+}
+
+#regContainer .basic-form #actionbar fieldset {
+  padding-top: 0;
+}
+
+#regContainer .basic-form li {
+  list-style: none;
+  background: none;
+  margin: 0 0 0 0;
+  padding: 3px 0 3px 0px;
+  position: relative;
+}
+
+#regContainer .basic-form li.edit-profile-pic {
+  margin: 0 0 16px 16px;
+}
+
+#regContainer .basic-form li label {
+  float: left;
+  padding: 4px 6px 4px 0px;
+  width: 150px;
+}
+
+#regContainer .basic-form li label.error {
+  float: right;
+  padding: 4px 106px 4px 0px;
+}
+
+#regContainer .basic-form li label.full {
+  float: none;
+  width: auto;
+}
+
+#regContainer .basic-form p.field-note {
+  color: #aaa;
+  font-size: 10px;
+  padding-top: 3px;
+  margin-bottom: 0px;
+  margin-left: 157px;
+}
+
+#regContainer .basic-form li select {
+  height: 30px;
+}
+
+#regContainer .basic-form .waiver-block {
+  background: #FAFAFA;
+  width: 550px !important;
+  height: 200px !important;
+}
+
+#regContainer .basic-form li input[type=text] {
+  background: #FAFAFA;
+}
+
+.form-wrapper .base-listing li {
+  background: none;
+  padding: 0;
+}
+
+.form-wrapper .base-meta h2 {
+  font-size: 21px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* --------------------------------------------
+		REGISTRATION ACTION BAR
+	-------------------------------------------*/
+#actionbar {
+  margin: 20px 0 30px 0;
+  overflow: hidden;
+}
+
+.btn.huge-btn {
+  font-size: 18px;
+  padding: 10px 30px;
+}
+
+.btn.huge-btn.light {
+  opacity: .70;
+}
+
+.form-btns.right {
+  float: right;
+}
+
+.form-btns.left {
+  float: left;
+}
+
+.btn.right {
+  float: right;
+}
+
+.btn.left {
+  float: left;
+}
+
+.base-actions.full {
+  width: 100%;
+  clear: both;
+}
+
+.base-actions.space {
+  margin-bottom: 20px;
+}
+
+/* --------------------------------------------
+		TOOLTIP / FIELD HELP
+	-------------------------------------------*/
+.basic-form .tooltip-icon a {
+  background-image: url(/_i/_site2.0/regheader/icon-help.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  moz-border-radius: 50%;
+  webkit-border-radius: 50%;
+  margin-left: 6px;
+  width: 18px;
+  height: 18px;
+  padding: 2px;
+  top: 2px;
+  bottom: 0;
+  position: absolute;
+}
+
+.basic-form .tooltip-icon a:link, .basic-form .tooltip-icon a:visited {
+  background-color: #D4D4D4;
+}
+
+.basic-form .tooltip-icon a:hover {
+  background-color: #2869C1;
+  /* This should match the color set in the theme designer */
+}
+
+/* --------------------------------------------
+		GROUP MEMBERS TABLE
+	-------------------------------------------*/
+.form-wrapper table {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#ga-members-table {
+  float: left;
+}
+
+#ga-members-table th {
+  color: #D4D4D4;
+  text-align: left;
+  font-size: 11px;
+  text-transform: uppercase;
+  padding: 4px 0 4px 0;
+  diplay: table-row;
+  text-align: center;
+}
+
+#ga-members-table td {
+  text-align: center;
+  padding-bottom: 4px;
+  vertical-align: top;
+}
+
+#ga-members-table th:first-child {
+  text-align: left;
+}
+
+#ga-members-table th:last-child {
+  text-align: center;
+}
+
+#ga-members-table td:first-child {
+  font-weight: bold;
+  text-align: left;
+}
+
+#ga-members-table td:last-child {
+  text-align: center;
+}
+
+.form-wrapper .light {
+  color: #aaa;
+}
+
+#ga-members-table .view-drawer {
+  background-color: #f9f9f9;
+  border: #e6e6e6 solid 1px;
+}
+
+#ga-members-table .details {
+  padding: 10px 0 2px 10px;
+}
+
+#ga-members-table .details dt {
+  text-align: left;
+  text-transform: uppercase;
+  color: #ccc;
+  font-size: 10px;
+}
+
+#ga-members-table .details dd {
+  text-align: left;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+#ga-members-table dl.basic {
+  margin-bottom: 4px;
+}
+
+#ga-members-table td.payment {
+  text-align: right;
+}
+
+#ga-members-table td.payment-status {
+  text-align: left;
+}
+
+/* --------------------------------------------
+		GROUP MEMBERS EDIT OVERLAY
+	-------------------------------------------*/
+#gaiframe {
+  border: 0;
+}
+
+.wrap.overlay {
+  width: 730px !important;
+}
+
+.closeOverlay {
+  float: right;
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 10px;
+  margin-top: 2px;
+}
+
+.closeOverlay a {
+  color: #999;
+}
+
+/* --------------------------------------------
+		GA DASHBOARD TABS
+	-------------------------------------------*/
+.form-wrapper .simple-tabs {
+  padding: 0;
+  margin: 0 10px 1em 0;
+}

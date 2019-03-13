@@ -1,0 +1,41 @@
+html, body, div, span, object, form, fieldset, h1, h2, h3, h4, h5, h6, p, ul, ol, dl, li, dt, dd, blockquote, a, abbr, code, del, em {
+  background: transparent;
+  border: 0;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+img {
+  border: none;
+}
+
+:focus {
+  outline: 0 none transparent;
+}
+
+*::-moz-focus-inner {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.hide, hr, legend {
+  display: none;
+}
+
+.clear {
+  clear: both;
+}
+
+.clr:after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
