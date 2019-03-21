@@ -7,80 +7,6 @@
  * @since 1.0.0
  */
 
-if ( ! function_exists( 'bornkickers_posted_on' ) ) :
-	/**
-	 * Prints HTML with meta information for the current post-date/time.
-	 */
-	function bornkickers_posted_on() {
-		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
-		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
-		}
-
-		$time_string = sprintf(
-			$time_string,
-			esc_attr( get_the_date( DATE_W3C ) ),
-			esc_html( get_the_date() ),
-			esc_attr( get_the_modified_date( DATE_W3C ) ),
-			esc_html( get_the_modified_date() )
-		);
-
-		printf(
-			'<span class="posted-on">%1$s<a href="%2$s" rel="bookmark">%3$s</a></span>',
-			'',
-			esc_url( get_permalink() ),
-			$time_string
-		);
-	}
-endif;
-
-if ( ! function_exists( 'bornkickers_posted_by' ) ) :
-	/**
-	 * Prints HTML with meta information about theme author.
-	 */
-	function bornkickers_posted_by() {
-		printf(
-			/* translators: 1: SVG icon. 2: post author, only visible to screen readers. 3: author link. */
-			'<span class="byline">%1$s<span class="screen-reader-text">%2$s</span><span class="author vcard"><a class="url fn n" href="%3$s">%4$s</a></span></span>',
-			'',
-			__( 'Posted by', 'bornkickers' ),
-			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-			esc_html( get_the_author() )
-		);
-	}
-endif;
-
-if ( ! function_exists( 'bornkickers_post_thumbnail' ) ) :
-	/**
-	 * Displays an optional post thumbnail.
-	 *
-	 * Wraps the post thumbnail in an anchor element on index views, or a div
-	 * element when on single views.
-	 */
-	function bornkickers_post_thumbnail() {
-
-		if ( is_singular() ) :
-			?>
-
-			<figure class="post-thumbnail">
-				<?php the_post_thumbnail(); ?>
-			</figure><!-- .post-thumbnail -->
-
-			<?php
-		else :
-			?>
-
-		<figure class="post-thumbnail">
-			<a class="post-thumbnail-inner" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
-				<?php the_post_thumbnail( 'post-thumbnail' ); ?>
-			</a>
-		</figure>
-
-			<?php
-		endif; // End is_singular().
-	}
-endif;
-
 function bornkickers_dropdown_menu( $menu ) {
 
 	$menu_name = $menu;
@@ -99,7 +25,7 @@ function bornkickers_dropdown_menu( $menu ) {
 				} else {
 					$cpi =  $current->menu_item_parent;
 				}
-				$cai = $current->ID;
+				$cpi = $current->ID;
 				break;
 			}
 		}
@@ -153,7 +79,7 @@ function bornkickers_social_menu( $menu ) {
 	if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) {
 		$menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
 	 
-		$menu_items = wp_get_nav_menu_items($menu->term_id);
+		$menu_items = wp_get_nav_menu_items( $menu->term_id );
 	 
 		$menu_list = '<ul id="menu-' . $menu_name . '">';
 	 

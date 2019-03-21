@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8c219a1e085c1fc3ab01a7d2dc25ae56",
+    "content-hash": "6e8c7a07dac37ae26eccde832209bb10",
     "packages": [
         {
             "name": "htmlburger/carbon-fields",
@@ -138,12 +138,56 @@
             "description": "WordPress developer-friendly custom fields for post types, taxonomy terms, users, comments, widgets, options and more.",
             "homepage": "http://carbonfields.net/",
             "time": "2019-01-14T12:30:37+00:00"
+        },
+        {
+            "name": "iamntz/carbon-fields-urlpicker",
+            "version": "v3.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/iamntz/carbon-fields-urlpicker.git",
+                "reference": "57902c70179202acd57899a32eb2060c83910d0e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/iamntz/carbon-fields-urlpicker/zipball/57902c70179202acd57899a32eb2060c83910d0e",
+                "reference": "57902c70179202acd57899a32eb2060c83910d0e",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "field.php"
+                ],
+                "psr-4": {
+                    "Carbon_Field_UrlPicker\\": "core/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Ionuț Staicu",
+                    "email": "github@iamntz.com"
+                }
+            ],
+            "description": "Carbon Fields extension, that adds a URL picker field type.",
+            "homepage": "https://github.com/iamntz/carbon-fields-urlpicker",
+            "keywords": [
+                "carbon-field",
+                "carbon-fields-urlpicker",
+                "wordpress"
+            ],
+            "time": "2019-03-04T10:45:35+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "iamntz/carbon-fields-urlpicker": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

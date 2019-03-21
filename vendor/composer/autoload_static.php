@@ -6,10 +6,15 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit53b7485ab9d73b4353ff027d1c6b3ec0
 {
+    public static $files = array (
+        'c36202a7ae4f6da358466aaea5ae6ae2' => __DIR__ . '/..' . '/iamntz/carbon-fields-urlpicker/field.php',
+    );
+
     public static $prefixLengthsPsr4 = array (
         'C' => 
         array (
             'Carbon_Fields\\' => 14,
+            'Carbon_Field_UrlPicker\\' => 23,
         ),
     );
 
@@ -17,6 +22,10 @@ class ComposerStaticInit53b7485ab9d73b4353ff027d1c6b3ec0
         'Carbon_Fields\\' => 
         array (
             0 => __DIR__ . '/..' . '/htmlburger/carbon-fields/core',
+        ),
+        'Carbon_Field_UrlPicker\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/iamntz/carbon-fields-urlpicker/core',
         ),
     );
 

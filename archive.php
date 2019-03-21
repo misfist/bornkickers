@@ -10,25 +10,39 @@
  */
 
 get_header();
-		
-		if( function_exists( 'carbon_get_the_post_meta' ) ) {
-			$top_image = carbon_get_the_post_meta( 'crb_basic_top_image' );
-		}
-        ?>
 
+	$class = 'content_template_base1';
+	?>
+	
+	<?php 
+	if( is_post_type_archive( 'location' ) && get_theme_mod( 'location_archive_header_image' ) ) : 
+		$top_image = ( get_theme_mod( 'location_archive_header_image' ) ) ? get_theme_mod( 'location_archive_header_image' ) : get_header_image();
+		$class = 'content_template_base2';
+		?>
         <div class="content">
 
             <div class="top-image" style="background-image: url(<?php echo esc_url( $top_image ) ?>)">
-				<!--                <div class="corners"></div>-->
 				<?php
 					the_archive_title( '<h1 class="page-title">', '</h1>' );
 				?>
             </div>
 
         </div>
+	<?php endif; ?>
 
-        <div class="content content_template_base2">
-		<div class="row grid">
+	<div class="content <?php echo esc_attr( $class ) ?>">
+
+		<?php if( !get_theme_mod( 'location_archive_header_image' ) || !is_post_type_archive( 'location' ) ) : ?>
+			<?php the_archive_title( '<h1 class="page-title">', '</h1>' ); ?>
+		<?php endif; ?>
+
+		<?php if( is_post_type_archive( 'location' ) ) : ?>
+
+			<?php get_template_part( 'template-parts/components/location-filters' ); ?>
+		
+		<?php endif; ?>
+		
+		<div class="js-post-list row grid">
 			<?php
 			if ( have_posts() ):
 				while ( have_posts() ) :
@@ -44,11 +58,19 @@ get_header();
 					// End the loop.
 
 				endwhile;
+
 			endif;
 					
 			?>
-		  <div>
-        </div>
+		<div>
+
+		<div class="pagination">
+			<?php 
+			// Previous/next page navigation.
+			echo paginate_links();
+			?>
+		</div>
+	</div>
     <?php
 
 get_footer();

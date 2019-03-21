@@ -1,5 +1,6 @@
 {
     "require": {
-        "htmlburger/carbon-fields": "^3.0"
+        "htmlburger/carbon-fields": "^3.0",
+        "iamntz/carbon-fields-urlpicker": "v3.x-dev"
     }
 }

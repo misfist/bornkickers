@@ -4,9 +4,8 @@ get_header();
 if ( have_posts() ):
     while ( have_posts() ):
         the_post();
-
-        $top_image = carbon_get_the_post_meta( 'crb_basic_top_image' );
-
+        
+        $top_image = ( has_post_thumbnail() ) ? get_the_post_thumbnail_url( $post->ID, 'top-image' ) : get_header_image();
         ?>
 
         <div class="content">

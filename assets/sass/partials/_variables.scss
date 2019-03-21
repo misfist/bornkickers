@@ -16,10 +16,12 @@ $color_amaranth_approx: #f32647;
 
 //fonts
 $font-open-sans: 'Open Sans', sans-serif;
-$font-open-sans-bold: Open Sans Bold;
-$font-open-sans-semi: Open Sans Semibold;
-$font-sans: sans-serif;
+$font-open-sans-bold: 'Open Sans Bold', sans-serif;
+$font-open-sans-semi: 'Open Sans Semibold', sans-serif;
+$font-sans: $font-open-sans, sans-serif;
 $font-mono: monospace;
+$font-semi-bold: 600;
+$font-bold: 700;
 
 $font-base: $font-open-sans;
 $font-header: $font-open-sans-bold;
@@ -31,3 +33,4 @@ $breakpoints: (
     "lg":       1040px,
     "xl":       1439px,
 );
+
