@@ -1,0 +1,40 @@
+/******* Forms ********/
+
+input[type="text"],
+input[type="date"],
+input[type="date-local"],
+input[type="email"],
+input[type="month"],
+input[type="password"],
+input[type="search"],
+input[type="submit"],
+input[type="tel"],
+input[type="dtime"],
+input[type="url"],
+input[type="week"] {
+    border-radius: 0;
+}
+
+.button {
+	@extend %button;
+	background-color: $white;
+	color: $color-red;
+}
+
+.caldera-grid {
+	.has-error {
+        color: $body-color;
+	}
+
+	.parsley-required {
+		font-size: 16px;
+		font-style: italic;
+        color: $color-red;
+	}
+
+    .form-control {
+        border-radius: 0 !important;
+    }
+}
+
+

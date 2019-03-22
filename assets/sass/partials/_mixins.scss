@@ -22,3 +22,22 @@
   ::-moz-placeholder          { @content }
   :-ms-input-placeholder      { @content }  
 }
+
+@mixin screen-reader-text {
+    margin: -1px;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip: rect(0, 0, 0, 0);
+    position: absolute;
+}
+
+%button {
+	padding: 8px 10px;
+	border: 2px solid $color-red;
+	border-radius: 0;
+	line-height: 30px;
+	text-transform: uppercase;
+}

@@ -1,7 +1,18 @@
 /* Graus */
+.location-filters select,
+.location-filters input,
+.location-filters button {
+  padding: 8px 10px;
+  border: 2px solid #f20c23;
+  border-radius: 0;
+  line-height: 30px;
+  text-transform: uppercase; }
+
+/******* Typography ********/
 body {
   font-family: "Open Sans", sans-serif; }
 
+/******* General ********/
 .screen-reader-text {
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -45,14 +56,6 @@ body {
 
 .location-filters {
   margin-bottom: 10px; }
-  .location-filters select,
-  .location-filters input,
-  .location-filters button {
-    padding: 6px 8px;
-    border: 2px solid #f20c23;
-    border-radius: 0;
-    line-height: 30px;
-    text-transform: uppercase; }
   .location-filters select,
   .location-filters input {
     background-color: #fff;
@@ -157,33 +160,33 @@ body {
       line-height: inherit;
       margin: 0; } }
 
+.post-type-archive-coach .coach h3,
+.page-template-page-coaches .coach h3 {
+  margin-top: 10px;
+  font-size: 18px;
+  text-align: center; }
+
+@media only screen and (min-width: 800px) {
+  .post-type-archive-coach .coach h3,
+  .page-template-page-coaches .coach h3 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 24px; } }
+
 .home h2 {
   text-transform: uppercase; }
 
 .home .coaches .coaches__gallery {
   max-width: 100%; }
 
-.footer-extra {
-  margin-bottom: 30px;
-  text-align: center; }
-  .footer-extra .copyright,
-  .footer-extra .terms-menu {
-    display: block; }
-  .footer-extra .terms-menu {
-    margin-top: 30px; }
-    .footer-extra .terms-menu li {
-      display: inline-block; }
-    .footer-extra .terms-menu li + li {
-      margin-left: 30px; }
-  @media only screen and (min-width: 800px) {
-    .footer-extra {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-              justify-content: space-between; }
-      .footer-extra .terms-menu {
-        margin-top: 0; } }
+.partners__image__title {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute; }
 
 /*# sourceMappingURL=gutenberg.css.map */

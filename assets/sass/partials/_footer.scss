@@ -1,0 +1,82 @@
+/******* Footer ********/
+
+.site-footer {
+    .footer-social {
+        text-align: center;
+        width: auto;
+
+        li {
+            display: inline-block;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        li + li {
+            margin-left: 44px;
+        }
+
+        a {
+            float: none;
+        }
+
+        a[href*="facebook"] {
+            background-image: url('../img/fb.png');
+        }
+        a[href*="instagram"] {
+            background-image: url('../img/inst.png');
+        }
+    }
+}
+
+.footer-extra {
+	margin-bottom: 30px;
+	text-align: center;
+
+	.copyright,
+	.terms-menu {
+		display: block;
+	}
+
+	.terms-menu {
+		margin-top: 30px;
+
+		li {
+			display: inline-block;
+		}
+
+		li + li {
+			margin-left: 30px;
+		}
+	}
+
+	@include breakpoint(md) {
+		display: flex;
+		justify-content: space-between;
+
+		.terms-menu {
+			margin-top: 0;
+		}
+	}
+
+	@include breakpoint(lg) {}
+}
+
+.footer-menu {
+    
+    text-align: center;
+
+    @include breakpoint(md) {
+        width: 25%;
+		text-align: left;
+
+        -moz-column-count: 2;
+        -moz-column-gap: 20px;
+        -webkit-column-count: 2;
+        -webkit-column-gap: 20px;
+        column-count: 2;
+        column-gap: 20px;
+
+	}
+}

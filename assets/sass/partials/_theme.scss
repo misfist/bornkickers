@@ -1,3 +1,5 @@
+/******* General ********/
+
 .screen-reader-text {
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -65,11 +67,7 @@
 	select,
 	input,
 	button {
-		padding: 6px 8px;
-		border: 2px solid $color-red;
-		border-radius: 0;
-		line-height: 30px;
-		text-transform: uppercase;
+		@extend %button;
 	}
 
 	select,
@@ -205,7 +203,26 @@
 }
 
 .post-type-archive-coach,
-.page-template-page-coaches {}
+.page-template-page-coaches {
+	.coach {
+		h3 {
+			margin-top: 10px;
+			font-size: 18px;
+			text-align: center;
+		}
+	}
+
+	@include breakpoint(md) {
+		.coach {
+			h3 {
+				margin-top: 30px;
+				margin-bottom: 10px;
+				font-size: 24px;
+			}
+		}
+	}
+	
+}
 
 .home {
 	h2 {
@@ -219,35 +236,7 @@
 	}
 }
 
-.footer-extra {
-	margin-bottom: 30px;
-	text-align: center;
-
-	.copyright,
-	.terms-menu {
-		display: block;
-	}
-
-	.terms-menu {
-		margin-top: 30px;
-
-		li {
-			display: inline-block;
-		}
-
-		li + li {
-			margin-left: 30px;
-		}
-	}
-
-	@include breakpoint(md) {
-		display: flex;
-		justify-content: space-between;
-
-		.terms-menu {
-			margin-top: 0;
-		}
-	}
-
-	@include breakpoint(lg) {}
+.partners__image__title {
+	@include screen-reader-text;
 }
+
