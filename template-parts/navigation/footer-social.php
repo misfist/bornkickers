@@ -4,7 +4,14 @@
  */
 ?>
 
-<div class="footer-social">
-    <a href="https://instagram.com/bornkickers" target="_blank" class="instagram"></a>
-    <a href="https://www.facebook.com/BornKickersSoccer" target="_blank" class="facebook"></a>
-</div>
+<?php
+    wp_nav_menu( array(
+        'theme_location'    => 'social-menu',
+        'menu'              => 'social-menu',
+        'menu_class'        => 'footer-social',
+        'container'         => 'nav',
+        'fallback_cb'       => false,
+        'link_before'       => '<span class="screen-reader-text">',
+        'link_after'        => '</span>'
+    ) ); 
+?>

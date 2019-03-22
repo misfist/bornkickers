@@ -4,7 +4,7 @@
  */
 ?>
 
-<ul class="footer-col1">
+<!-- <ul class="footer-col1">
     <li>
         <a href="/">Home</a>
     </li>
@@ -29,4 +29,15 @@
     <li>
         <a href="/contact-us">Contact Us</a>
     </li>
-</ul>
+</ul> -->
+
+<?php
+    wp_nav_menu( array(
+        'theme_location'    => 'footer-menu',
+        'menu'              => 'footer-menu',
+        'menu_class'        => 'footer-menu',
+        'container'         => 'nav',
+        'fallback_cb'       => false,
+        'depth'             => 1
+    ) ); 
+?>
