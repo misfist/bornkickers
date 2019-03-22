@@ -40,4 +40,9 @@ include_once trailingslashit( get_stylesheet_directory() ) . 'inc/template-tags.
  * Enqueue template tag functions
  */
  include_once trailingslashit( get_stylesheet_directory() ) . 'inc/location-filters.php';
+
+/**
+ * Custom Nav Walker Class
+ */
+ include_once trailingslashit( get_stylesheet_directory() ) . 'inc/class-nav-walker.php';
   
