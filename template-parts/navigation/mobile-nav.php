@@ -1,9 +1,8 @@
 <?php
 /**
- * Utility Navigation Markup
+ * Mobile Navigation
  */
 ?>
-
 
 <div class="menu-overlay">
     <div>
@@ -15,7 +14,19 @@
 
         <span id="close_menu" class="close"></span>
     </div>
-    <ul class="main-mobile-nav">
+
+    
+    <?php
+    wp_nav_menu( array(
+        'theme_location'    => 'mobile-menu',
+        'menu'              => 'main-mobile-nav',
+        'menu_class'        => 'main-mobile-nav',
+        'container'         => '',
+        'fallback_cb'       => false,
+        'walker'            => new Bornkickers_Mobile_Walker_Nav_Menu()
+    ) );
+    ?>
+    <!-- <ul class="main-mobile-nav">
         <li>
             <a href="/">Home</a>
         </li>
@@ -64,5 +75,5 @@
         <li>
             <a href="/contact-us">Contact</a>
         </li>
-    </ul>
+    </ul> -->
 </div>
