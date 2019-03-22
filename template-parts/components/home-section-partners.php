@@ -21,7 +21,7 @@
                         <li class="partners__image">
                             <div class="partners__image__pic">
                                 <a href="<?php echo esc_url( $logo['link']['url'] ); ?>" target="_blank">
-                                    <img src="<?php echo esc_url( $logo['image'] ); ?>" alt="<? echo esc_attr( $logo['text'] ); ?>" />
+                                    <img src="<?php echo esc_url( $logo['image'] ); ?>" alt="<?php echo esc_attr( $logo['text'] ); ?>" />
                                 </a>
                             </div>
                             <div class="partners__image__title"><?php echo esc_attr( $logo['text'] ); ?></div>
