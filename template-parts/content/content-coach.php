@@ -19,13 +19,13 @@
 		<img src="<?php echo get_theme_mod( 'default_coach_image' ); ?>" >
 	<?php endif; ?>
 
-	<header class="entry-header">
+	<div class="entry-header">
 		<?php
 		the_title( '<h3 class="entry-title">', '</h3>' );
 		?>
 
 		<div class="entry-meta"></div>
-	</header><!-- .entry-header -->
+	</div><!-- .entry-header -->
 
 	<div class="entry-content">
 		<?php
@@ -53,6 +53,4 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-	</footer><!-- .entry-footer -->
 </article><!-- #post-${ID} -->
