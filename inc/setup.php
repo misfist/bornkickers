@@ -26,7 +26,8 @@
 function bornkickers_menus() {
 
 	register_nav_menus( array(
-		'main-menu' 		=> __( 'Main Menu', 'bornkickers' ),
+		'primary' 			=> __( 'Main Menu', 'bornkickers' ),
+		'mobile-menu' 		=> __( 'Mobile Menu', 'bornkickers' ),
 		'top-menu' 			=> __( 'Top Menu', 'bornkickers' ),
 		'footer-menu' 		=> __( 'Footer Menu', 'bornkickers' ),
 		'social-menu' 		=> __( 'Social Menu', 'bornkickers' ),
@@ -159,9 +160,41 @@ function bornkickers_pre_get_posts( $query ) {
 		$query->set( 'post__not_in', array( get_option( 'page_on_front' ) ) );
 	}
 
-	if ( is_post_type_archive( array( 'location' ) ) ) {
+	if ( is_post_type_archive( array( 'location', 'coach' ) ) ) {
 		$query->set( 'order', 'ASC' );
 		$query->set( 'orderby', 'title' );
 	}
 }
 add_action( 'pre_get_posts', 'bornkickers_pre_get_posts' ); 
+
+/**
+ * Modify menu clasees
+ */
+function bornkickers_nav_menu_css_class( $classes, $item, $args, $depth ) {
+	if( 'primary' !== $args->theme_location ) {
+		return $classes;
+	}
+
+    if ( in_array( 'current-menu-item', $classes ) || in_array( 'current-menu-parent', $classes ) ) {
+        $classes[] = 'brackets';
+    }
+    return $classes;
+}
+add_filter( 'nav_menu_css_class' , 'bornkickers_nav_menu_css_class' , 10 , 4 );
+
+/**
+ * Add Page Slug to Body Class
+ * @see https://developer.wordpress.org/reference/hooks/body_class/
+ *
+ * @param array $classes
+ * @return array $classes - modified classes
+ */
+function bornkickers_body_class( $classes ) {
+	global $post;
+
+	if ( isset( $post ) ) {
+		$classes[] = $post->post_type . '-' . $post->post_name;
+	}
+	return $classes;
+}
+add_filter( 'body_class', 'bornkickers_body_class' );
