@@ -10,11 +10,9 @@
 
 <div class="container">
     <header class="site-header">
-        <a href="<?php echo home_url(); ?>" class="logo">
-            <?php if ( function_exists( 'the_custom_logo' ) ) {
-                the_custom_logo();
-            } ?>
-        </a>
+        <?php if ( function_exists( 'the_custom_logo' ) ) {
+            the_custom_logo();
+        } ?>
 
         <nav class="mobile"></nav>
 
